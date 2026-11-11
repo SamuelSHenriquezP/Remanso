@@ -634,21 +634,21 @@ class _DevotionalSessionScreenState extends State<DevotionalSessionScreen> {
       onTap: onPressed,
       child: Container(
         width: double.infinity,
-        height: 54,
+        height: 50,
         decoration: BoxDecoration(
           color: isPrimary
-              ? const Color(0xFF1B8B62) // Verde esmeralda sereno estilo Bambú
-              : Colors.white.withOpacity(0.12),
-          borderRadius: BorderRadius.circular(30),
+              ? const Color(0xFF3B6882) // Acero azul sobrio estilo Expand
+              : const Color(0xFF161A22),
+          borderRadius: BorderRadius.circular(22),
           border: isPrimary
               ? null
-              : Border.all(color: Colors.white.withOpacity(0.18), width: 0.8),
+              : Border.all(color: const Color(0x18FFFFFF), width: 0.8),
           boxShadow: isPrimary
               ? [
                   BoxShadow(
-                    color: const Color(0xFF1B8B62).withOpacity(0.40),
-                    blurRadius: 16,
-                    offset: const Offset(0, 5),
+                    color: const Color(0xFF3B6882).withOpacity(0.35),
+                    blurRadius: 14,
+                    offset: const Offset(0, 4),
                   ),
                 ]
               : null,
@@ -659,16 +659,16 @@ class _DevotionalSessionScreenState extends State<DevotionalSessionScreen> {
             Icon(
               icon,
               color: Colors.white,
-              size: 20,
+              size: 19,
             ),
             const SizedBox(width: 8),
             Text(
               label,
               style: RemansoTheme.uiFont(
-                fontSize: 14.5,
-                fontWeight: FontWeight.w700,
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
                 color: Colors.white,
-                letterSpacing: 0.4,
+                letterSpacing: 0.3,
               ),
             ),
           ],

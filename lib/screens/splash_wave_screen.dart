@@ -188,17 +188,17 @@ class _SplashWaveScreenState extends State<SplashWaveScreen>
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 26),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF142034).withOpacity(0.92),
-                        borderRadius: BorderRadius.circular(22),
+                        color: const Color(0xFF161A22).withOpacity(0.95),
+                        borderRadius: BorderRadius.circular(14),
                         border: Border.all(
-                          color: Colors.white.withOpacity(0.18),
+                          color: const Color(0x18FFFFFF),
                           width: 1,
                         ),
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.40),
-                            blurRadius: 24,
-                            offset: const Offset(0, 8),
+                            blurRadius: 20,
+                            offset: const Offset(0, 6),
                           ),
                         ],
                       ),
@@ -207,7 +207,7 @@ class _SplashWaveScreenState extends State<SplashWaveScreen>
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           const RemansoLogo(
-                            size: 34,
+                            size: 32,
                             variant: RemansoLogoVariant.iconOnly,
                           ),
                           const SizedBox(height: 12),
@@ -216,8 +216,8 @@ class _SplashWaveScreenState extends State<SplashWaveScreen>
                             style: RemansoTheme.labelFont(
                               fontSize: 10,
                               fontWeight: FontWeight.w700,
-                              letterSpacing: 2.2,
-                              color: const Color(0xFFE5B26E),
+                              letterSpacing: 2.0,
+                              color: const Color(0xFF8E9BAE),
                             ),
                           ),
                           const SizedBox(height: 12),
@@ -225,21 +225,19 @@ class _SplashWaveScreenState extends State<SplashWaveScreen>
                             '«${today.getVerse(_repo.preferredBibleVersion)}»',
                             textAlign: TextAlign.center,
                             style: RemansoTheme.displayFont(
-                              fontSize: 20.5,
-                              fontWeight: FontWeight.w400,
+                              fontSize: 17,
+                              fontWeight: FontWeight.w500,
                               color: Colors.white,
-                              height: 1.45,
-                              fontStyle: FontStyle.italic,
+                              height: 1.5,
                             ),
                           ),
-                          const SizedBox(height: 12),
+                          const SizedBox(height: 10),
                           Text(
                             '— ${today.scriptureVerse}',
                             style: RemansoTheme.uiFont(
                               fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: const Color(0xFFB4C4DB),
-                              letterSpacing: 0.5,
+                              fontWeight: FontWeight.w500,
+                              color: const Color(0xFF8E9BAE),
                             ),
                           ),
                         ],
@@ -248,7 +246,7 @@ class _SplashWaveScreenState extends State<SplashWaveScreen>
                   ),
                 ),
 
-                // 4. Botón de ingreso directo estilo Bambú / Calm
+                // 4. Botón de ingreso directo estilo Expand
                 Positioned(
                   bottom: MediaQuery.of(context).padding.bottom + 22,
                   left: 0,
@@ -257,14 +255,14 @@ class _SplashWaveScreenState extends State<SplashWaveScreen>
                     child: TactilePressCard(
                       onTap: _finishAscentAndComplete,
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 13),
+                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF1B8B62),
-                          borderRadius: BorderRadius.circular(28),
+                          color: const Color(0xFF3B6882),
+                          borderRadius: BorderRadius.circular(22),
                           boxShadow: [
                             BoxShadow(
-                              color: const Color(0xFF1B8B62).withOpacity(0.45),
-                              blurRadius: 16,
+                              color: const Color(0xFF3B6882).withOpacity(0.35),
+                              blurRadius: 14,
                               offset: const Offset(0, 4),
                             ),
                           ],
@@ -276,9 +274,9 @@ class _SplashWaveScreenState extends State<SplashWaveScreen>
                               'Entrar al Remanso',
                               style: RemansoTheme.uiFont(
                                 fontSize: 13,
-                                fontWeight: FontWeight.w700,
+                                fontWeight: FontWeight.w600,
                                 color: Colors.white,
-                                letterSpacing: 0.5,
+                                letterSpacing: 0.3,
                               ),
                             ),
                             const SizedBox(width: 8),

@@ -71,30 +71,30 @@ class RemansoPalette {
 
   // --- PALETAS REALES CURADAS ---
 
-  /// 1. Calm Crepúsculo (Inspirado en Calm y Expand: azul crepúsculo atmosférico, estrellas y serenidad)
+  /// 1. Expand Obsidiana (Inspirado en el diseño minimalista y sereno de Expand: obsidiana profunda, acero azul y blanco puro)
   static const RemansoPalette linoCalido = RemansoPalette(
     id: RemansoPaletteId.linoCalido,
-    name: 'Calm Crepúsculo',
-    subtitle: 'Cielo crepuscular, paz profunda y quietud',
-    description: 'Atmósfera inmersiva y pacífica para meditar y orar. Tonos azules serenos, luz del alba y descanso.',
+    name: 'Expand Obsidiana',
+    subtitle: 'Obsidiana profunda, quietud y acero azul',
+    description: 'Estética visual sobria, moderna y consistente. Un solo tono nocturno sosegado, tipografía geométrica limpia y reverencia ante Dios.',
     brightness: Brightness.dark,
-    scaffold: Color(0xFF101927), // Azul crepúsculo sereno profundo
-    surfaceStone: Color(0xFF1A263B),
-    surfacePure: Color(0xFF1E2D46),
-    surfaceElevated: Color(0xFF243653),
-    accentPrimary: Color(0xFF2EC4B6), // Turquesa sereno
-    accentSage: Color(0xFF38B000),
-    accentSageLight: Color(0xFF183B36),
-    accentSecondary: Color(0xFFE5B26E), // Oro cálido del alba
-    accentSecondaryLight: Color(0xFF3D3222),
-    accentLight: Color(0xFFE5B26E),
-    accentLightSubtle: Color(0xFF23324B),
+    scaffold: Color(0xFF0D0F14), // Obsidiana profunda pura
+    surfaceStone: Color(0xFF141820),
+    surfacePure: Color(0xFF181D26), // Superficie de tarjeta limpia
+    surfaceElevated: Color(0xFF1E2430),
+    accentPrimary: Color(0xFF3B6882), // Acero azul sobrio estilo Expand
+    accentSage: Color(0xFF3B6882),
+    accentSageLight: Color(0xFF1E2C36),
+    accentSecondary: Color(0xFF8E9BAE), // Plata serena
+    accentSecondaryLight: Color(0xFF222B36),
+    accentLight: Color(0xFF3B6882),
+    accentLightSubtle: Color(0xFF18202A),
     textPrimary: Color(0xFFFFFFFF), // Blanco puro nítido
-    textMuted: Color(0xFFB4C4DB),
-    textSubtle: Color(0xFF7E92B0),
-    borderSubtle: Color(0x28FFFFFF), // Borde translúcido etéreo
-    matteObsidian: Color(0xFF0B111B),
-    matteStoneDark: Color(0xFF182335),
+    textMuted: Color(0xFF9AA8BA), // Gris plata suave
+    textSubtle: Color(0xFF63738A), // Gris atenuado
+    borderSubtle: Color(0x1AFFFFFF), // Línea sutil arquitectónica
+    matteObsidian: Color(0xFF0A0C10),
+    matteStoneDark: Color(0xFF141820),
   );
 
   /// 2. Papiro & Oliva (Manuscrito y abadía con olivo silvestre)
@@ -238,68 +238,64 @@ class RemansoTheme {
   static List<BoxShadow> get darkGlowShadow => [];
   static List<BoxShadow> get goldGlowShadow => [];
 
-  // --- Geometría y Bordes Suaves Estilo Calm / Bambú ---
-  static final BorderRadius cardRadius = BorderRadius.circular(18);
-  static final BorderRadius stoneRadius = BorderRadius.circular(16);
-  static final BorderRadius buttonRadius = BorderRadius.circular(28);
-  static final BorderRadius inputRadius = BorderRadius.circular(14);
-  static final BorderRadius badgeRadius = BorderRadius.circular(14);
+  // --- Geometría y Bordes Sobrios y Modernos Estilo Expand ---
+  static final BorderRadius cardRadius = BorderRadius.circular(14);
+  static final BorderRadius stoneRadius = BorderRadius.circular(12);
+  static final BorderRadius buttonRadius = BorderRadius.circular(22);
+  static final BorderRadius inputRadius = BorderRadius.circular(12);
+  static final BorderRadius badgeRadius = BorderRadius.circular(6);
 
-  // --- Tipografías Maestras (Google Fonts con Fallbacks Robustos Offline-First) ---
-  static const List<String> serifFallback = [
-    'Georgia',
-    'Times New Roman',
-    'serif',
-  ];
+  // --- Tipografía Única y Coherente (Plus Jakarta Sans en toda la app estilo Expand) ---
   static const List<String> sansFallback = [
     'Plus Jakarta Sans',
+    'Inter',
     'Segoe UI',
     'Roboto',
     'sans-serif',
   ];
 
   static TextStyle displayFont({
-    double fontSize = 28,
-    FontWeight fontWeight = FontWeight.w400,
+    double fontSize = 24,
+    FontWeight fontWeight = FontWeight.w600,
     Color? color,
-    double height = 1.25,
+    double height = 1.3,
     double letterSpacing = -0.3,
     FontStyle fontStyle = FontStyle.normal,
   }) {
-    return GoogleFonts.cormorantGaramond(
+    return GoogleFonts.plusJakartaSans(
       fontSize: fontSize,
       fontWeight: fontWeight,
       color: color ?? textCharcoal,
       height: height,
       letterSpacing: letterSpacing,
       fontStyle: fontStyle,
-    ).copyWith(fontFamilyFallback: serifFallback);
+    ).copyWith(fontFamilyFallback: sansFallback);
   }
 
   static TextStyle readingFont({
-    double fontSize = 17.5,
+    double fontSize = 15,
     FontWeight fontWeight = FontWeight.w400,
     Color? color,
-    double height = 1.72,
+    double height = 1.6,
     double letterSpacing = 0.1,
     FontStyle fontStyle = FontStyle.normal,
   }) {
-    return GoogleFonts.cormorantGaramond(
+    return GoogleFonts.plusJakartaSans(
       fontSize: fontSize,
       fontWeight: fontWeight,
       color: color ?? textCharcoal,
       height: height,
       letterSpacing: letterSpacing,
       fontStyle: fontStyle,
-    ).copyWith(fontFamilyFallback: serifFallback);
+    ).copyWith(fontFamilyFallback: sansFallback);
   }
 
   static TextStyle uiFont({
-    double fontSize = 12.5,
+    double fontSize = 13,
     FontWeight fontWeight = FontWeight.w500,
     Color? color,
-    double height = 1.45,
-    double letterSpacing = 0.3,
+    double height = 1.4,
+    double letterSpacing = 0.2,
   }) {
     return GoogleFonts.plusJakartaSans(
       fontSize: fontSize,
@@ -311,10 +307,10 @@ class RemansoTheme {
   }
 
   static TextStyle labelFont({
-    double fontSize = 10.5,
+    double fontSize = 10,
     FontWeight fontWeight = FontWeight.w700,
     Color? color,
-    double letterSpacing = 1.8,
+    double letterSpacing = 1.6,
   }) {
     return GoogleFonts.plusJakartaSans(
       fontSize: fontSize,

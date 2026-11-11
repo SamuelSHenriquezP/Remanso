@@ -50,7 +50,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
 
     final bottomNav = Container(
       decoration: BoxDecoration(
-        color: const Color(0xF00D1524),
+        color: const Color(0xFF0C0E12),
         border: Border(
           top: BorderSide(
             color: Colors.white.withOpacity(0.08),
@@ -153,7 +153,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
               decoration: BoxDecoration(
                 color: isSelected
-                    ? const Color(0xFF2EC4B6).withOpacity(0.20)
+                    ? const Color(0xFF3B6882).withOpacity(0.20)
                     : Colors.transparent,
                 borderRadius: BorderRadius.circular(18),
               ),
@@ -161,8 +161,8 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
                 isSelected && activeIcon != null ? activeIcon : icon,
                 size: 20,
                 color: isSelected
-                    ? const Color(0xFF2EC4B6)
-                    : const Color(0xFF7E92B0),
+                    ? const Color(0xFF3B6882)
+                    : const Color(0xFF63738A),
               ),
             ),
             const SizedBox(height: 3),
@@ -175,7 +175,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
                 fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
                 color: isSelected
                     ? Colors.white
-                    : const Color(0xFF7E92B0),
+                    : const Color(0xFF63738A),
                 letterSpacing: 0.2,
               ),
             ),
